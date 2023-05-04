@@ -4,6 +4,7 @@ import br.com.benezinhobank.pessoa.model.Pessoa;
 
 public abstract class Conta {
 
+    private String numero;
     private Agencia agencia;
 
     private Pessoa titular;
@@ -41,5 +42,32 @@ public abstract class Conta {
 
     public void setSaldo(double saldo) {
         saldo = saldo;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+
+
+    }
+
+    public Conta(String numero, Agencia agencia, Pessoa titular, double saldo) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "numero='" + numero + '\'' +
+                ", agencia=" + agencia +
+                ", titular=" + titular +
+                ", saldo=" + saldo +
+                '}';
     }
 }

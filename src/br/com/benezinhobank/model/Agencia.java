@@ -42,4 +42,13 @@ public class Agencia {
         this.nome = nome;
         this.bannco = bannco;
     }
+
+    @Override
+    public String toString() {
+        return "Agencia{" +
+                "numero='" + numero + '\'' +
+                ", nome='" + nome + '\'' +
+                ", bannco=" + bannco +
+                '}';
+    }
 }
